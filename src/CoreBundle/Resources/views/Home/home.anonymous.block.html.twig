@@ -1,0 +1,49 @@
+{% block lia_cms_content %}
+a
+    {{ uigrid.render()|raw }}
+aaaaaaaa
+
+    {#{% verbatim %}#}
+{#<script type="text/javascript">#}
+    {#var myApp = angular.module('myApp', ['ngTouch', 'ui.grid']);#}
+    {#myApp.controller('MainCtrl', ['$scope', function ($scope) {#}
+        {#$scope.text    = 'Hello, Angular fanatic.';#}
+        {#$scope.myModel = '';#}
+        {#$scope.myData  = [#}
+            {#{#}
+                {#"firstName": "Cox",#}
+                {#"lastName": "Carney",#}
+                {#"company": "Enormo",#}
+                {#"employed": true#}
+            {#},#}
+            {#{#}
+                {#"firstName": "Lorraine",#}
+                {#"lastName": "Wise",#}
+                {#"company": "Comveyer",#}
+                {#"employed": false#}
+            {#},#}
+            {#{#}
+                {#"firstName": "Nancy",#}
+                {#"lastName": "Waters",#}
+                {#"company": "Fuelton",#}
+                {#"employed": false#}
+            {#}#}
+        {#];#}
+    {#}]);#}
+{#</script>#}
+    {#<style type="text/css">#}
+        {#.myGrid {#}
+            {#width: 500px;#}
+            {#height: 25px;#}
+        {#}#}
+        {#.ui-grid-header-cell {#}
+            {#height: 30px !important;#}
+        {#}#}
+    {#</style>#}
+{#<div ng-app="myApp">#}
+    {#<div ng-controller="MainCtrl">#}
+        {#<div id="grid1" ui-grid="{ data: myData }" class="myGrid"></div>#}
+    {#</div>#}
+{#</div>#}
+    {#{% endverbatim %}#}
+{% endblock %}

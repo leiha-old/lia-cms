@@ -1,0 +1,13 @@
+layout:
+    profil: "Profil"
+    dashboard: "Accueil"
+    reset: "Oubli"
+
+content:
+    admin:
+        users:
+            menu:    "Utilisateurs"
+            listing: "Liste des utilisateurs"
+        groups:
+            menu:    "Groupes"
+            listing: "Liste des groupes"

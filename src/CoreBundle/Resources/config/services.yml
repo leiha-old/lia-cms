@@ -1,0 +1,9 @@
+parameters:
+    lia.controller.cms.class: Lia\Cms\CoreBundle\Controller\HomeController
+
+services:
+    lia.controller.cms:
+        class:        %lia.controller.cms.class%
+        arguments:    []
+        calls:
+            - ['setContainer', ['@service_container']]

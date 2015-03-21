@@ -1,0 +1,2 @@
+_lia_cms_user:
+    resource: "@LiaCmsUserBundle/Resources/config/routing.yml"

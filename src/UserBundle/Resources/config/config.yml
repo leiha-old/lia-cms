@@ -1,0 +1,21 @@
+imports:
+    - { resource: "security.yml"}
+    - { resource: "security/access_control.yml"}
+    - { resource: "security/firewalls.yml"}
+
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: Lia\Cms\UserBundle\Entity\User
+    group:
+        group_class: Lia\Cms\UserBundle\Entity\Group
+    registration:
+        confirmation:
+            enabled:    true
+        form:
+            type: fos_user_registration
+
+
+sp_bower:
+    bundles:
+#        LiaBridgeAngularBundle: ~

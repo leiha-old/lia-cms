@@ -1,0 +1,16 @@
+{% extends "::base.html.twig" %}
+
+{% block lia_cms_auth %}
+    <div id="site-auth">
+        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+            {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+            <a href="{{ path('lia_cms_home') }}">{{ 'layout.dashboard'|trans({}, 'LiaCmsUserBundle') }}</a>
+            <a href="{{ path('fos_user_profile_show') }}">{{ 'layout.profil'|trans({}, 'LiaCmsUserBundle') }}</a>
+            <a href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a>
+        {% else %}
+            <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+            <a href="{{ path('fos_user_registration_register') }}">{{ 'layout.register'|trans({}, 'FOSUserBundle') }}</a>
+            <a href="{{ path('fos_user_resetting_request') }}">{{ 'layout.reset'|trans({}, 'LiaCmsUserBundle') }}</a>
+        {% endif %}
+    </div>
+{% endblock %}

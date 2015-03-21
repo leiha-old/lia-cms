@@ -1,0 +1,46 @@
+lia_user_index:
+    path:   /
+    defaults:  { _controller: LiaCmsUserBundle:User:index}
+    requirements:
+        _method:  GET
+
+lia_user_show:
+    path:   /{id}
+    defaults:  { _controller: LiaCmsUserBundle:User:show}
+    requirements:
+        id: \d+
+        _method:  GET
+
+lia_user_create:
+    path:   /create
+    defaults:  { _controller: LiaCmsUserBundle:User:create}
+    requirements:
+        _method:  GET
+
+lia_user_create_:
+    path:   /create
+    defaults:  { _controller: LiaCmsUserBundle:User:create}
+    requirements:
+        _method:  POST
+
+
+lia_user_edit:
+    path:   /{id}/edit
+    defaults:  { _controller: LiaCmsUserBundle:User:edit}
+    requirements:
+        id: \d+
+        _method:  PUT
+
+lia_user_edit_form:
+    path:   /{id}/edit
+    defaults:  { _controller: LiaCmsUserBundle:User:edit}
+    requirements:
+        id: \d+
+        _method:  GET
+
+lia_user_delete:
+    path:   /{id}
+    defaults:  { _controller: LiaCmsUserBundle:User:delete}
+    requirements:
+        id: \d+
+        _method:  DELETE

@@ -1,0 +1,5 @@
+{% block lia_cms_content %}
+    Hello Admin :
+  <a href="{{ path('lia_user_index') }}">{{ 'content.admin.users.menu'|trans({}, 'LiaCmsUserBundle') }}</a>
+  <a href="{{ path('fos_user_group_list') }}">{{ 'content.admin.groups.menu'|trans({}, 'LiaCmsUserBundle') }}</a>
+{% endblock %}

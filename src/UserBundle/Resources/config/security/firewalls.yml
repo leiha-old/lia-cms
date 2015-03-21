@@ -1,0 +1,29 @@
+security:
+    firewalls:
+        # Custom firewall for the admin area of the URL
+#        admin:
+#            pattern:            /admin(.*)
+#            context:            user
+#            form_login:
+#                provider:       fos_userbundle
+#                login_path:     fos_user_admin_login
+#                use_forward:    false
+#                check_path:     fos_user_admin_check
+#                failure_path:   null
+#            logout:
+#                path:           fos_user_admin_logout
+#            anonymous:          false
+
+        # This firewall is used to handle the public login area
+        # This part is handled by the FOS User Bundle
+        main:
+            pattern: ^/
+            form_login:
+                provider: fos_userbundle
+                csrf_provider: form.csrf_provider
+                login_path: fos_user_security_login
+                check_path: fos_user_security_check
+            logout:
+                path: fos_user_security_logout
+                target: /
+            anonymous:    true

@@ -1,0 +1,45 @@
+{
+  "name": "lia/cms",
+  "description": "Lia Framework : CMS",
+  "homepage": "https://github.com/leiha/lia-cms/",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Leiha Sellier",
+      "email": "leiha.sellier@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-0": { "Lia\\Cms\\": "src/" }
+  },
+  "repositories": [
+    {
+	"type": "vcs",
+        "url": "https://github.com/leiha/lia-kernel.git",
+    },
+    {
+	"type": "vcs",
+        "url": "https://github.com/leiha/lia-theme.git",
+    },
+    {
+	"type": "vcs",
+        "url": "https://github.com/leiha/lia-listing.git",
+    },
+    {
+	"type": "vcs",
+        "url": "https://github.com/leiha/lia-crud.git",
+    }
+  ],
+  "require": {
+        "lia/kernel": "dev-master@dev",
+        "lia/theme": "dev-master@dev",
+        "lia/crud": "dev-master@dev",
+        "lia/listing": "dev-master@dev",
+        "friendsofsymfony/user-bundle": "~2.0@dev"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.0.x-dev"
+    }
+  }
+}

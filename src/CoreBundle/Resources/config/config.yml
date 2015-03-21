@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@LiaCmsUserBundle/Resources/config/config.yml"}

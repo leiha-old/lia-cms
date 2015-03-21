@@ -1,0 +1,9 @@
+{% extends "@LiaCmsCore/layout.html.twig" %}
+
+{% use "@LiaKernelCrud/Crud/create.html.twig" %}
+
+{% block lia_cms_content %}
+  <h1>User Creation</h1>
+  {% block lia_crud_content %}{{ parent() }}{% endblock %}
+  {% block lia_crud_actions %}{{ parent() }}{% endblock %}
+{% endblock %}
